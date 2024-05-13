@@ -10,9 +10,11 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "1-build-keretrendszer-beüzemelése-+-ci-beüzemelése"]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "1-build-keretrendszer-beüzemelése-+-ci-beüzemelése"]
+  workflow_dispatch:
+
 
 jobs:
   build:
@@ -28,7 +30,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file Macisajt-Projlab/pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
