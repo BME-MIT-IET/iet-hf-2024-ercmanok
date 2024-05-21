@@ -22,7 +22,7 @@ public class GameWindow extends JPanel {
     /**
      * Fájl objektum a játék állapotának mentéséhez
      */
-    public static File autosave = new File("autosave.sav");
+    public static final File autosave = new File("autosave.sav");
 
     /**
      * A csőrendszert és a játékosokat megjelenítő pálya
@@ -39,7 +39,7 @@ public class GameWindow extends JPanel {
      */
     public JLabel lRounds = new JLabel();
 
-    public JMenuBar menuBar = new JMenuBar();
+    public static JMenuBar menuBar = new JMenuBar();
 
     /**
      * A begyűjött víz összmennyíségét megjelenítő címke
@@ -196,14 +196,14 @@ public class GameWindow extends JPanel {
                                 .addComponent(playerPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(14, 14, 14))
         );
-        GroupLayout MapLayout = new GroupLayout(map);
-        map.setLayout(MapLayout);
-        MapLayout.setHorizontalGroup(
-                MapLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+        GroupLayout mapLayout = new GroupLayout(map);
+        map.setLayout(mapLayout);
+        mapLayout.setHorizontalGroup(
+                mapLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGap(0, 954, Short.MAX_VALUE)
         );
-        MapLayout.setVerticalGroup(
-                MapLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+        mapLayout.setVerticalGroup(
+                mapLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGap(0, 0, Short.MAX_VALUE)
         );
         GroupLayout layout = new GroupLayout(this);

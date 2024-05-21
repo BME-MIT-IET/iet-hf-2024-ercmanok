@@ -1,15 +1,16 @@
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  * A csővezeték hálózat csomópontjainak absztrakt ősosztálya.
  * Felelőssége a csövekkel való kapcsolat megvalósítása.
  */
 public abstract class Node extends Component {
-
+    private Logger logger = Logger.getLogger(getClass().getName());
     /**
      * A csomópont grafikus megjelenítésére szolgáló kör sugara
      */
-    public static final int radius = 20;
+    public static final int RADIUS = 20;
 
     /**
      * A csomóponthoz kapcsolódó csövek.
@@ -28,10 +29,10 @@ public abstract class Node extends Component {
                 players.add(player);
                 return true;
             }
-            System.out.println("A csomópontra csak szomszédos csőről lehet lépni!");
+            logger.info("A csomópontra csak szomszédos csőről lehet lépni!");
             return false;
         } catch (ClassCastException ignored) {
-            System.out.println("A csomópontra csak csőről lehet lépni!");
+           logger.info("A csomópontra csak csőről lehet lépni!");
             return false;
         }
     }
@@ -46,7 +47,7 @@ public abstract class Node extends Component {
         try {
             this.pipes.add((Pipe) component);
         } catch (ClassCastException ignored) {
-            System.out.println("A komponens nem egy cső!");
+            logger.info("A komponens nem egy cső!");
         }
     }
 
@@ -59,7 +60,7 @@ public abstract class Node extends Component {
         try {
             this.pipes.remove((Pipe) component);
         } catch (ClassCastException ignored) {
-            System.out.println("A komponens nem egy cső!");
+            logger.info("A komponens nem egy cső!");
         }
     }
 }

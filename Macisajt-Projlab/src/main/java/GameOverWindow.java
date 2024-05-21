@@ -40,11 +40,12 @@ public class GameOverWindow extends JPanel {
         JLabel lResult2 = new JLabel();
         JLabel lTeam = new JLabel();
         JButton bBackToMain = new JButton();
-
+        String fontStandard = "Segoe UI";
+        String fontBold = "Segoe UI Semibold";
         panel.setBackground(View.PRIMARY_COLOR);
         panel.setForeground(View.SECONDARY_COLOR);
 
-        lTitle.setFont(new Font("Segoe UI", Font.BOLD, 60));
+        lTitle.setFont(new Font(fontStandard, Font.BOLD, 60));
         lTitle.setForeground(View.SECONDARY_COLOR);
         lTitle.setHorizontalAlignment(SwingConstants.CENTER);
         switch (winner) {
@@ -53,23 +54,23 @@ public class GameOverWindow extends JPanel {
             case DRAW -> lTitle.setText("<html><center>GAME OVER<br><br>Döntetlen</html>");
         }
 
-        lResult1.setFont(new Font("Segoe UI", Font.BOLD, 35));
+        lResult1.setFont(new Font(fontStandard, Font.BOLD, 35));
         lResult1.setForeground(View.SECONDARY_COLOR);
         lResult1.setHorizontalAlignment(SwingConstants.CENTER);
         lResult1.setText("Összegyűjtött vízmennyiség: " + Game.Instance.pipelineSystem.getCollectedWater());
 
-        lResult2.setFont(new Font("Segoe UI", Font.BOLD, 35));
+        lResult2.setFont(new Font(fontStandard, Font.BOLD, 35));
         lResult2.setForeground(View.SECONDARY_COLOR);
         lResult2.setHorizontalAlignment(SwingConstants.CENTER);
         lResult2.setText("Kifolyt vízmennyiség: " + Game.Instance.pipelineSystem.getLeakedWater());
 
-        lTeam.setFont(new Font("Segoe UI Semibold", Font.ITALIC, 18));
+        lTeam.setFont(new Font(fontBold, Font.ITALIC, 18));
         lTeam.setForeground(View.SECONDARY_COLOR);
         lTeam.setHorizontalAlignment(SwingConstants.CENTER);
         lTeam.setText("macisajt csapat");
 
         bBackToMain.setBackground(View.SECONDARY_COLOR);
-        bBackToMain.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 36));
+        bBackToMain.setFont(new Font(fontBold, Font.PLAIN, 36));
         bBackToMain.setForeground(View.PRIMARY_COLOR);
         bBackToMain.setText("VISSZA A FŐMENÜBE");
         bBackToMain.addActionListener(this::bBackToMainActionPerformed);
