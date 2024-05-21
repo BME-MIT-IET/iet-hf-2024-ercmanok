@@ -25,7 +25,7 @@ public class Game implements Serializable {
     /**
      * Az aktuális játék példánya
      */
-    public static final Game Instance = getInstance();
+    public static Game Instance = getInstance();
 
     /**
      * Új játék létrehozása a megadott szerelők és szabotőrök neveivel
@@ -33,19 +33,25 @@ public class Game implements Serializable {
      * @param plumberNames  a szerelők nevei
      * @param saboteurNames a szabotőrök nevei
      */
+
+    private static ArrayList<Pump> pumps = new ArrayList<Pump>();
+    private static ArrayList<Cistern> cisterns = new ArrayList<Cistern>();
+    private static ArrayList<Spring> springs = new ArrayList<Spring>();
+    private static int padding = Node.radius * 2;
+    private static int maxDeltaX = 950 - 2 * padding;
+    private static int maxDeltaY = 700 - 2 * padding;
+
     public static void newGame(List<String> plumberNames, List<String> saboteurNames) {
         
         //Játékosok inicializálása
         instantiatePlumbers(plumberNames);
         instantiateSaboteurs(saboteurNames);
-        
-       
+           
         // Pálya generálása
         int springCount = random.nextInt(3, 6);
         int cisternCount = random.nextInt(2, 5);
         int pumpCount = random.nextInt(5, 8);
 
-       
         //Pályaelemek felállítása
         setUpSprings(springCount);
         setUpPumps(pumpCount);
@@ -54,16 +60,12 @@ public class Game implements Serializable {
         // A játékosok elhelyezése
         placePlayers();
         
-       
-
         // Forrásokból kiinduló csövek létrehozása
         setUpPipesFromSource(springCount);
-       
-
+    
         // Ciszternákba vezető csövek létrehozása
         setUpPipesForCisterns(cisternCount);
         
-
         var connections = new HashMap<Node, HashSet<Node>>();
         for (var pump : pumps) {
             connections.put(pump, new HashSet<>());
@@ -134,7 +136,6 @@ public class Game implements Serializable {
     }
 
     private static void setUpSprings(int springCount){
-        var springs = new ArrayList<Spring>();
         for (int i = 0; i < springCount; i++) {
             Spring spring = new Spring();
             int x = padding + random.nextInt(0, maxDeltaX / 10);
@@ -159,7 +160,6 @@ public class Game implements Serializable {
     }
 
     private static void setUpPumps(int pumpCount){
-        var pumps = new ArrayList<Pump>();
         for (int i = 0; i < pumpCount; i++) {
             Pump pump = new Pump();
             int x = padding + random.nextInt(maxDeltaX * 2 / 10, maxDeltaX * 8 / 10);
@@ -188,7 +188,6 @@ public class Game implements Serializable {
         int maxDeltaY = 700 - 2 * padding;
         int padding = Node.radius * 2;
 
-        var cisterns = new ArrayList<Cistern>();
         for (int i = 0; i < cisternCount; i++) {
             Cistern cistern = new Cistern();
             int x = padding + random.nextInt(maxDeltaX * 9 / 10, maxDeltaX);
@@ -267,7 +266,7 @@ public class Game implements Serializable {
     /**
      * A csőrendszert reprezentálja. Tárolja a csöveket, pumpákat, ciszternákat és forrásokat.
      */
-    private PipelineSystem pipelineSystem = new PipelineSystem();
+    public static PipelineSystem pipelineSystem = new PipelineSystem();
 
     public PipelineSystem getPipelineSystem() {
         return pipelineSystem;
@@ -280,7 +279,7 @@ public class Game implements Serializable {
     /**
      * A játékot játszó játékosok gyűjteménye.
      */
-    private List<Player> players = new ArrayList<>();
+    public List<Player> players = new ArrayList<>();
 
     public List<Player> getPlayers() {
         return players;

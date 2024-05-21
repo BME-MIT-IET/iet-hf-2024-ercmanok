@@ -57,7 +57,7 @@ public class View{
         FRAME.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                if (Game.Instance != null) Game.SaveGame(GameWindow.autosave);
+                if (Game.Instance != null) Game.saveGame(GameWindow.autosave);
             }
         });
         FRAME.setResizable(false);
