@@ -10,7 +10,7 @@ public abstract class Node extends Component {
     /**
      * A csomópont grafikus megjelenítésére szolgáló kör sugara
      */
-    public static final int RADIUS = 20;
+    public static final int radius = 20;
 
     /**
      * A csomóponthoz kapcsolódó csövek.
