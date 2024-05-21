@@ -39,7 +39,7 @@ public class GameWindow extends JPanel {
      */
     public JLabel lRounds = new JLabel();
 
-    public static JMenuBar menuBar = new JMenuBar();
+    public JMenuBar menuBar = new JMenuBar();
 
     /**
      * A begyűjött víz összmennyíségét megjelenítő címke
