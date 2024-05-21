@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  * A víz szállításáért felelős.
  */
 public class Pipe extends Component {
-    private Logger logger = Logger.getLogger(getClass().getName());
+    private final static Logger logger = Logger.getLogger("pipe logger");
     private Random r = new Random();
     /**
      * A cső grafikus megjelenítésére szolgáló vonal alapértelmezett színe

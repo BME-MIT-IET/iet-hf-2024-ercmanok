@@ -6,7 +6,7 @@ import java.util.logging.Logger;
  * Felelőssége a csövekkel való kapcsolat megvalósítása.
  */
 public abstract class Node extends Component {
-    private Logger logger = Logger.getLogger(getClass().getName());
+    private final static Logger logger = Logger.getLogger("node logger");
     /**
      * A csomópont grafikus megjelenítésére szolgáló kör sugara
      */
