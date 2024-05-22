@@ -35,6 +35,11 @@ Ezzel a művelettel a függvény komplexitása lecsökkent a Sonar Cloud statisz
 
 A projekt további részeiben még kisebb változásokat tettem, ami főleg a változó nevekhez kötődik, ezeket nem listáznám ki egyesével.
 
+## Fennálló problémák
+
+Nagyon sok olyan problémát észlel a Sonar Cloud, ami egy hosszútávú projektben nyilván kiküszöbölendő probléma. Például bejegyzett egy UI elemnek az exception kezelésére, hogy változtassuk meg, mielőtt kiekrülne productionbe. Vagy nagyon sok helyen változókat akar statikussá változtatni, amik ha megtesszük a program működését gátolják.
+
 ## Összegzés
 
 Az analÍzisben feltárt problémák főleg a kód fenntarthatóságát emelik ki, az elnevezések nem követik a clean code elveket sok helyen.
+Számomra a legnagyobb tanulság, hogy a projekt készülése alatt érdemes ezt az eszközt használni, mivel utólag módosítani beégett funkcionalitásokat nagyon bonyolult és gyakran nem azt eredményezi, mint amit szeretnénk.
