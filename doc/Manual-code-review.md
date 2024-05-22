@@ -1,5 +1,24 @@
 # Manuális kód átvizsgálás elvégzése az alkalmazás egy részére
 
+## Átvizsgálási szempontok
+Az alább részletezett manuális kód átvizsgálás során a következő szempontokat tartottam szem előtt:
+    
+        - megfelelő kommentezés, érthetőség
+            - mennyiségben
+            - minőségben
+        - osztályon belüli konzisztencia
+        - projekten belüli konzisztencia
+        - clean code elvek betartása
+        - kivételek megfelelő kezelése
+            - elkapás, dobás
+            - Nullpointer exception
+        - redundancia csökkentés
+        - felhasználó megfelelő értesítése
+        - magic numbers elkerülés
+        - későbbi kódmódosítás megkönnyítés
+            - karbantarthatóság
+            - hardcoded érték konstansba kiszervezése
+
 ## Cistern osztály
 
 ### Észrevétel
@@ -69,4 +88,4 @@ A SelectorPanel példányosítás és a synchronized blokk több helyen is ismé
 
 ## Összegzés
 Az összes átnézett osztály jól kommentezett, a kommentek jól, és könnyen érthetőek.\
-Az átnézett osztályokban mind a kód, mind a kommentek  jól strukturáltak és érthetőek, stílusukat tekintve egyaránt konzisztensek. Azonban elnevezések nem mindig beszédesek, van ahol nem követik a clean code elveket.
+Az átnézett osztályokban mind a kód, mind a kommentek  jól strukturáltak és érthetőek, stílusukat tekintve egyaránt konzisztensek. Azonban elnevezések nem mindig beszédesek, van ahol nem követik a clean code elveket.   
