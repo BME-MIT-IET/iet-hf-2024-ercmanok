@@ -1,0 +1,6 @@
+# Created at 2024-05-22T22:02:26.760
+/snap/core20/current/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by /lib/x86_64-linux-gnu/libproxy.so.1)
+
+# Created at 2024-05-22T22:02:26.760
+Failed to load module: /home/ifo/snap/code/common/.cache/gio-modules/libgiolibproxy.so
+

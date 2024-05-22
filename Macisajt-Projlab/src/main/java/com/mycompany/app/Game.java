@@ -1,3 +1,5 @@
+package com.mycompany.app;
+
 import javax.swing.*;
 import java.awt.Point;
 import java.io.*;
