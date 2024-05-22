@@ -1,3 +1,4 @@
+package com.mycompany.app;
 import javax.swing.*;
 import java.awt.Point;
 import java.awt.geom.Point2D;

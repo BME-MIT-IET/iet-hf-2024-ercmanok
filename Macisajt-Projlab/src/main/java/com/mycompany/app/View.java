@@ -1,3 +1,4 @@
+package com.mycompany.app;
 /**
  * Ez a program a "Sivatagi vízhálózat" feladat grafikus változata.
  *

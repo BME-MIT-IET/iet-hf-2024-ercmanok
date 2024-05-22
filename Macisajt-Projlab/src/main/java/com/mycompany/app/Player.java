@@ -1,3 +1,4 @@
+package com.mycompany.app;
 import javax.swing.JOptionPane;
 import java.awt.Color;
 import java.io.Serializable;

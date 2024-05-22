@@ -1,3 +1,4 @@
+package com.mycompany.app;
 import javax.swing.GroupLayout;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
