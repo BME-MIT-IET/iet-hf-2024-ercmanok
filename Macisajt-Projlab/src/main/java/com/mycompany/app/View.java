@@ -1,5 +1,4 @@
 package com.mycompany.app;
-
 /**
  * Ez a program a "Sivatagi vízhálózat" feladat grafikus változata.
  *
@@ -59,7 +58,7 @@ public class View{
         FRAME.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                if (Game.Instance != null) Game.SaveGame(GameWindow.autosave);
+                if (Game.Instance != null) Game.saveGame(GameWindow.autosave);
             }
         });
         FRAME.setResizable(false);
@@ -110,3 +109,4 @@ public class View{
         FRAME.repaint();
     }
 }
+

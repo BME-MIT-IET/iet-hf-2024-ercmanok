@@ -1,5 +1,4 @@
 package com.mycompany.app;
-
 import javax.swing.GroupLayout;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
@@ -24,7 +23,7 @@ public class GameWindow extends JPanel {
     /**
      * Fájl objektum a játék állapotának mentéséhez
      */
-    public static File autosave = new File("autosave.sav");
+    public static final File autosave = new File("autosave.sav");
 
     /**
      * A csőrendszert és a játékosokat megjelenítő pálya
@@ -67,7 +66,7 @@ public class GameWindow extends JPanel {
      * @param saboteurNames szabotőrök nevei
      */
     GameWindow(ArrayList<String> plumberNames, ArrayList<String> saboteurNames) {
-        Game.NewGame(plumberNames, saboteurNames);
+        Game.newGame(plumberNames, saboteurNames);
         initComponents();
     }
 
@@ -198,14 +197,14 @@ public class GameWindow extends JPanel {
                                 .addComponent(playerPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(14, 14, 14))
         );
-        GroupLayout MapLayout = new GroupLayout(map);
-        map.setLayout(MapLayout);
-        MapLayout.setHorizontalGroup(
-                MapLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+        GroupLayout mapLayout = new GroupLayout(map);
+        map.setLayout(mapLayout);
+        mapLayout.setHorizontalGroup(
+                mapLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGap(0, 954, Short.MAX_VALUE)
         );
-        MapLayout.setVerticalGroup(
-                MapLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+        mapLayout.setVerticalGroup(
+                mapLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGap(0, 0, Short.MAX_VALUE)
         );
         GroupLayout layout = new GroupLayout(this);
@@ -247,7 +246,7 @@ public class GameWindow extends JPanel {
      * @param evt a menüpont megnyomásakor kiváltódott esemény
      */
     private void miExitToMenuActionPerformed(ActionEvent evt) {
-        Game.SaveGame(autosave);
+        Game.saveGame(autosave);
         View.FRAME.setJMenuBar(null);
         View.setContentPane(View.MAIN_MENU_WINDOW);
         View.MAIN_MENU_WINDOW.bContinueGame.setEnabled(GameWindow.autosave.exists());
@@ -259,7 +258,7 @@ public class GameWindow extends JPanel {
      * @param evt a menüpont megnyomásakor kiváltódott esemény
      */
     private void miExitProgramActionPerformed(ActionEvent evt) {
-        Game.SaveGame(autosave);
+        Game.saveGame(autosave);
         View.FRAME.dispose();
     }
 
@@ -273,7 +272,7 @@ public class GameWindow extends JPanel {
         fileChooser.setName("saveFileChooser");
         fileChooser.setDialogTitle("Adja meg a fájl nevés tés elérési útját");
         if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION)
-            Game.SaveGame(fileChooser.getSelectedFile());
+            Game.saveGame(fileChooser.getSelectedFile());
     }
 
     /**
@@ -286,7 +285,7 @@ public class GameWindow extends JPanel {
         fileChooser.setName("loadFileChooser");
         fileChooser.setDialogTitle("Válassza ki a korábban mentett játékot");
         if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION
-                && Game.LoadGame(fileChooser.getSelectedFile())) {
+                && Game.loadGame(fileChooser.getSelectedFile())) {
             View.GAME_WINDOW = new GameWindow();
             View.setContentPane(View.GAME_WINDOW);
             View.FRAME.setJMenuBar(View.GAME_WINDOW.menuBar);

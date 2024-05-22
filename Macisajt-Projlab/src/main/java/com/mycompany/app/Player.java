@@ -1,14 +1,14 @@
 package com.mycompany.app;
-
 import javax.swing.JOptionPane;
 import java.awt.Color;
 import java.io.Serializable;
+import java.util.Random;
 
 /**
  * A játékosokat megvalósító absztrakt osztály. Felelőssége a pumpák állítása és a csőrendszeren való mozgás.
  */
 public abstract class Player implements Drawable, Serializable {
-
+    private Random r = new Random();
     /**
      * A játékos grafikus megjelenítésére szolgáló alakzat színe, amikor a játékos soron van
      */
@@ -132,6 +132,6 @@ public abstract class Player implements Drawable, Serializable {
      */
     public void setAbleToMoveIn() {
         ableToMove = false;
-        ableToMoveIn = (int) (Math.random() * 5) + 1;
+        ableToMoveIn = (r.nextInt() * 5) + 1;
     }
 }

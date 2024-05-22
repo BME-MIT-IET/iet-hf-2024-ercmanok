@@ -1,5 +1,4 @@
 package com.mycompany.app;
-
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
