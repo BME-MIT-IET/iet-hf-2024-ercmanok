@@ -85,6 +85,7 @@ public class PlumberPanel extends JPanel {
         lName.setForeground(View.SECONDARY_COLOR);
         lName.setHorizontalAlignment(SwingConstants.CENTER);
         lName.setText(plumber.name);
+        lName.setName("lNamePlumber");
 
         lTeam.setFont(new Font("Segoe UI", Font.PLAIN, 20));
         lTeam.setForeground(View.SECONDARY_COLOR);
@@ -107,12 +108,14 @@ public class PlumberPanel extends JPanel {
         bPlacePipe.setFont(new Font("Segoe UI", Font.BOLD, 14));
         bPlacePipe.setForeground(View.PRIMARY_COLOR);
         bPlacePipe.setText("Cső lerakása");
+        bPlacePipe.setName("bPlacePipePlumber");
         bPlacePipe.addActionListener(this::bPlacePipeActionPerformed);
 
         bRedirect.setBackground(View.SECONDARY_COLOR);
         bRedirect.setFont(new Font("Segoe UI", Font.BOLD, 14));
         bRedirect.setForeground(View.PRIMARY_COLOR);
         bRedirect.setText("<html><p style=\"text-align:center\">Pumpa<br>átirányítása</p></html>");
+        bRedirect.setName("bRedirectPlumber");
         bRedirect.addActionListener(this::bRedirectActionPerformed);
 
         bPlacePump.setBackground(View.SECONDARY_COLOR);
@@ -131,6 +134,7 @@ public class PlumberPanel extends JPanel {
         bSticky.setFont(new Font("Segoe UI", Font.BOLD, 14));
         bSticky.setForeground(View.PRIMARY_COLOR);
         bSticky.setText("<html><p style=\"text-align:center\">Cső ragadóssá<br>tétele</p></html>");
+        bSticky.setName("bStickyPlumber");
         bSticky.addActionListener(this::bStickyActionPerformed);
 
         bMove.setBackground(View.SECONDARY_COLOR);

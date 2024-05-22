@@ -99,6 +99,7 @@ public class NewGameWindow extends JPanel {
         plumberTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         plumberTable.setShowHorizontalLines(false);
         plumberTable.setShowVerticalLines(false);
+        plumberTable.setName("plumberTable");
         jScrollPanePlumbers.setBorder(BorderFactory.createEmptyBorder());
         jScrollPanePlumbers.setViewportView(plumberTable);
         jScrollPanePlumbers.getViewport().setBackground(View.PRIMARY_COLOR);
@@ -117,6 +118,7 @@ public class NewGameWindow extends JPanel {
         saboteurTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         saboteurTable.setShowHorizontalLines(false);
         saboteurTable.setShowVerticalLines(false);
+        saboteurTable.setName("saboteurTable");
         jScrollPaneSaboteurs.setBorder(BorderFactory.createEmptyBorder());
         jScrollPaneSaboteurs.setViewportView(saboteurTable);
         jScrollPaneSaboteurs.getViewport().setBackground(View.PRIMARY_COLOR);
@@ -125,24 +127,28 @@ public class NewGameWindow extends JPanel {
         bNewPlumber.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 18)); // NOI18N
         bNewPlumber.setForeground(View.PRIMARY_COLOR);
         bNewPlumber.setText("ÚJ");
+        bNewPlumber.setName("bNewPlumber");
         bNewPlumber.addActionListener(this::bNewPlumberActionPerformed);
 
         bDeletePlumber.setBackground(View.SECONDARY_COLOR);
         bDeletePlumber.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 18)); // NOI18N
         bDeletePlumber.setForeground(View.PRIMARY_COLOR);
         bDeletePlumber.setText("TÖRLÉS");
+        bDeletePlumber.setName("bDeletePlumber");
         bDeletePlumber.addActionListener(this::bDeletePlumberActionPerformed);
 
         bNewSaboteur.setBackground(View.SECONDARY_COLOR);
         bNewSaboteur.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 18)); // NOI18N
         bNewSaboteur.setForeground(View.PRIMARY_COLOR);
         bNewSaboteur.setText("ÚJ");
+        bNewSaboteur.setName("bNewSaboteur");
         bNewSaboteur.addActionListener(this::bNewSaboteurActionPerformed);
 
         bDeleteSaboteur.setBackground(View.SECONDARY_COLOR);
         bDeleteSaboteur.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 18)); // NOI18N
         bDeleteSaboteur.setForeground(View.PRIMARY_COLOR);
         bDeleteSaboteur.setText("TÖRLÉS");
+        bDeleteSaboteur.setName("bDeleteSaboteur");
         bDeleteSaboteur.addActionListener(this::bDeleteSaboteurActionPerformed);
 
         bStartGame.setBackground(View.SECONDARY_COLOR);

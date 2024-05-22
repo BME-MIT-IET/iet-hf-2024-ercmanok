@@ -1,4 +1,4 @@
-//teszt
+package com.mycompany.app;
 
 /**
  * Ez a program a "Sivatagi vízhálózat" feladat grafikus változata.
@@ -9,7 +9,6 @@
  * @author Le Ngoc Toan
  * @author Stróbl Dániel Alajos
  */
-package com.mycompany.app;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -22,7 +21,7 @@ import java.awt.event.WindowEvent;
 /**
  * View absztrakt osztály, ami a modell grafikus megjelenítéséért felel
  */
-public abstract class View {
+public class View{
 
     /**
      * A grafikus felhasználói felület háttérszíne

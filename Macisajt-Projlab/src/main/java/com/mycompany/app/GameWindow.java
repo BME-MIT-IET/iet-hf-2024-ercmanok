@@ -103,18 +103,24 @@ public class GameWindow extends JPanel {
         JMenuItem miSaveGame = new JMenuItem();
         JMenuItem miLoadGame = new JMenuItem();
         mFile.setText("Fájl");
+        mFile.setName("mFile");
         miExitToMenu.setText("Kilépés a főmenübe");
+        miExitToMenu.setName("miExitToMenu");
         miExitToMenu.addActionListener(this::miExitToMenuActionPerformed);
         mFile.add(miExitToMenu);
         miExitProgram.setText("Kilépés a programból");
+        miExitProgram.setName("miExitProgram");
         miExitProgram.addActionListener(this::miExitProgramActionPerformed);
         mFile.add(miExitProgram);
         menuBar.add(mFile);
         mGame.setText("Játék");
+        mGame.setName("mGame");
         miSaveGame.setText("Mentés");
+        miSaveGame.setName("miSaveGame");
         miSaveGame.addActionListener(this::miSaveGameActionPerformed);
         mGame.add(miSaveGame);
         miLoadGame.setText("Betöltés");
+        miLoadGame.setName("miLoadGame");
         miLoadGame.addActionListener(this::miLoadGameActionPerformed);
         mGame.add(miLoadGame);
         menuBar.add(mGame);
@@ -132,6 +138,7 @@ public class GameWindow extends JPanel {
         lRounds.setFont(new Font("Segoe UI", Font.BOLD, 20));
         lRounds.setForeground(View.SECONDARY_COLOR);
         lRounds.setHorizontalAlignment(SwingConstants.CENTER);
+        lRounds.setName("lRounds");
 
         lCollected.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 16));
         lCollected.setForeground(View.SECONDARY_COLOR);
@@ -263,6 +270,7 @@ public class GameWindow extends JPanel {
      */
     private void miSaveGameActionPerformed(ActionEvent evt) {
         JFileChooser fileChooser = new JFileChooser(new File("").getAbsolutePath());
+        fileChooser.setName("saveFileChooser");
         fileChooser.setDialogTitle("Adja meg a fájl nevés tés elérési útját");
         if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION)
             Game.SaveGame(fileChooser.getSelectedFile());
@@ -275,8 +283,9 @@ public class GameWindow extends JPanel {
      */
     private void miLoadGameActionPerformed(ActionEvent evt) {
         JFileChooser fileChooser = new JFileChooser(new File("").getAbsolutePath());
+        fileChooser.setName("loadFileChooser");
         fileChooser.setDialogTitle("Válassza ki a korábban mentett játékot");
-        if (fileChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION
+        if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION
                 && Game.LoadGame(fileChooser.getSelectedFile())) {
             View.GAME_WINDOW = new GameWindow();
             View.setContentPane(View.GAME_WINDOW);

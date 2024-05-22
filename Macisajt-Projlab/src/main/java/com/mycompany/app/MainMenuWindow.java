@@ -64,6 +64,7 @@ public class MainMenuWindow extends JPanel {
         bNewGame.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 36)); // NOI18N
         bNewGame.setForeground(View.PRIMARY_COLOR);
         bNewGame.setText("ÚJ JÁTÉK INDÍTÁSA");
+        bNewGame.setName("hej");
         bNewGame.addActionListener(this::bNewGameActionPerformed);
 
         bLoadGame.setBackground(View.SECONDARY_COLOR);
@@ -152,8 +153,9 @@ public class MainMenuWindow extends JPanel {
      */
     private void bLoadGameActionPerformed(ActionEvent evt) {
         JFileChooser fileChooser = new JFileChooser(new File("").getAbsolutePath());
+        fileChooser.setName("bLoadFileChooser");
         fileChooser.setDialogTitle("Válassza ki a korábban mentett játékot");
-        if (fileChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION
+        if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION
                 && Game.LoadGame(fileChooser.getSelectedFile())) {
             View.GAME_WINDOW = new GameWindow();
             View.setContentPane(View.GAME_WINDOW);

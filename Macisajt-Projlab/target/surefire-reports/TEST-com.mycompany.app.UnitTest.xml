@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.UnitTest" time="9.251" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab/target/test-classes:/home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab/target/classes:/home/ifo/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/ifo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/ifo/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/ifo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/ifo/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/ifo/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/ifo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/ifo/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/ifo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/ifo/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/ifo/.m2/repository/org/assertj/assertj-swing-junit/3.9.2/assertj-swing-junit-3.9.2.jar:/home/ifo/.m2/repository/org/assertj/assertj-swing/3.9.2/assertj-swing-3.9.2.jar:/home/ifo/.m2/repository/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar:/home/ifo/.m2/repository/org/easytesting/fest-util/1.2.5/fest-util-1.2.5.jar:/home/ifo/.m2/repository/org/easytesting/fest-reflect/1.4.1/fest-reflect-1.4.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk-21-oracle-x64/lib"/>
+    <property name="sun.java.command" value="/home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab/target/surefire/surefirebooter471196698643115556.jar /home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab/target/surefire 2024-05-22T21-55-58_855-jvmRun1 surefire6728038485584396481tmp surefire_016153143053229429322tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab/target/test-classes:/home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab/target/classes:/home/ifo/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/ifo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/ifo/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/ifo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/ifo/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/ifo/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/ifo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/ifo/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/ifo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/ifo/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/ifo/.m2/repository/org/assertj/assertj-swing-junit/3.9.2/assertj-swing-junit-3.9.2.jar:/home/ifo/.m2/repository/org/assertj/assertj-swing/3.9.2/assertj-swing-3.9.2.jar:/home/ifo/.m2/repository/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar:/home/ifo/.m2/repository/org/easytesting/fest-util/1.2.5/fest-util-1.2.5.jar:/home/ifo/.m2/repository/org/easytesting/fest-reflect/1.4.1/fest-reflect-1.4.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/ifo"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="/usr/lib/jvm/jdk-21-oracle-x64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab/target/surefire/surefirebooter471196698643115556.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.3+7-LTS-152"/>
+    <property name="user.name" value="ifo"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.5.0-35-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/ifo/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.3"/>
+    <property name="user.dir" value="/home/ifo/Desktop/7.felev/integrációs technikák/iet-hf-2024-ercmanok/Macisajt-Projlab"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.3+7-LTS-152"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testNewGameWindow" classname="com.mycompany.app.UnitTest" time="9.243">
+    <error message="Unable to find component using matcher org.assertj.swing.core.matcher.JLabelMatcher[name=&apos;lNamePlumber&apos;, text=&lt;Any&gt;, requireShowing=false].&#10;&#10;Component hierarchy:&#10;javax.swing.JFrame[name=&apos;frame0&apos;, title=&apos;Sivatagi vízhálózat&apos;, enabled=true, visible=true, showing=true]&#10;  javax.swing.JRootPane[]&#10;    javax.swing.JPanel[name=&apos;null.glassPane&apos;]&#10;    javax.swing.JLayeredPane[]&#10;      com.mycompany.app.NewGameWindow[name=null]&#10;        javax.swing.JPanel[name=null]&#10;          javax.swing.JLabel[name=null, text=&apos;ÚJ JÁTÉK&apos;, enabled=true, visible=true, showing=true]&#10;          javax.swing.JButton[name=&apos;bNewPlumber&apos;, text=&apos;ÚJ&apos;, enabled=true, visible=true, showing=true]&#10;          javax.swing.JButton[name=&apos;bDeletePlumber&apos;, text=&apos;TÖRLÉS&apos;, enabled=true, visible=true, showing=true]&#10;          javax.swing.JButton[name=&apos;bNewSaboteur&apos;, text=&apos;ÚJ&apos;, enabled=true, visible=true, showing=true]&#10;          javax.swing.JButton[name=&apos;bDeleteSaboteur&apos;, text=&apos;TÖRLÉS&apos;, enabled=true, visible=true, showing=true]&#10;          javax.swing.JButton[name=null, text=&apos;VISSZA&apos;, enabled=true, visible=true, showing=true]&#10;          javax.swing.JLabel[name=null, text=&apos;Szerelők:&apos;, enabled=true, visible=true, showing=true]&#10;          javax.swing.JLabel[name=null, text=&apos;Szabotőrök:&apos;, enabled=true, visible=true, showing=true]&#10;          javax.swing.JScrollPane[name=null, enabled=true, visible=true, showing=true]&#10;            javax.swing.JViewport[,0,0,267x208,layout=javax.swing.ViewportLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=8388616,maximumSize=,minimumSize=,preferredSize=,isViewSizeSet=true,lastPaintPosition=java.awt.Point[x=0,y=0],scrollUnderway=false]&#10;              javax.swing.JTable[name=&apos;plumberTable&apos;, rowCount=3, columnCount=1, enabled=true, visible=true, showing=true]&#10;                javax.swing.CellRendererPane[,0,0,0x0,hidden]&#10;            javax.swing.JScrollPane$ScrollBar[name=null, value=0, blockIncrement=10, minimum=0, maximum=75, enabled=true, visible=false, showing=false]&#10;              javax.swing.plaf.metal.MetalScrollButton[name=null, text=&apos;&apos;, enabled=true, visible=true, showing=false]&#10;              javax.swing.plaf.metal.MetalScrollButton[name=null, text=&apos;&apos;, enabled=true, visible=true, showing=false]&#10;            javax.swing.JScrollPane$ScrollBar[name=null, value=0, blockIncrement=10, minimum=0, maximum=267, enabled=true, visible=false, showing=false]&#10;              javax.swing.plaf.metal.MetalScrollButton[name=null, text=&apos;&apos;, enabled=true, visible=true, showing=false]&#10;              javax.swing.plaf.metal.MetalScrollButton[name=null, text=&apos;&apos;, enabled=true, visible=true, showing=false]&#10;            javax.swing.JViewport[,0,0,267x0,layout=javax.swing.ViewportLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=8388616,maximumSize=,minimumSize=,preferredSize=,isViewSizeSet=false,lastPaintPosition=,scrollUnderway=false]&#10;          javax.swing.JScrollPane[name=null, enabled=true, visible=true, showing=true]&#10;            javax.swing.JViewport[,0,0,267x208,layout=javax.swing.ViewportLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=8388616,maximumSize=,minimumSize=,preferredSize=,isViewSizeSet=true,lastPaintPosition=java.awt.Point[x=0,y=0],scrollUnderway=false]&#10;              javax.swing.JTable[name=&apos;saboteurTable&apos;, rowCount=3, columnCount=1, enabled=true, visible=true, showing=true]&#10;                javax.swing.CellRendererPane[,0,0,0x0,hidden]&#10;            javax.swing.JScrollPane$ScrollBar[name=null, value=0, blockIncrement=10, minimum=0, maximum=75, enabled=true, visible=false, showing=false]&#10;              javax.swing.plaf.metal.MetalScrollButton[name=null, text=&apos;&apos;, enabled=true, visible=true, showing=false]&#10;              javax.swing.plaf.metal.MetalScrollButton[name=null, text=&apos;&apos;, enabled=true, visible=true, showing=false]&#10;            javax.swing.JScrollPane$ScrollBar[name=null, value=0, blockIncrement=10, minimum=0, maximum=267, enabled=true, visible=false, showing=false]&#10;              javax.swing.plaf.metal.MetalScrollButton[name=null, text=&apos;&apos;, enabled=true, visible=true, showing=false]&#10;              javax.swing.plaf.metal.MetalScrollButton[name=null, text=&apos;&apos;, enabled=true, visible=true, showing=false]&#10;            javax.swing.JViewport[,0,0,267x0,layout=javax.swing.ViewportLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=8388616,maximumSize=,minimumSize=,preferredSize=,isViewSizeSet=false,lastPaintPosition=,scrollUnderway=false]&#10;          javax.swing.JButton[name=null, text=&apos;JÁTÉK INDÍTÁSA&apos;, enabled=true, visible=true, showing=true]&#10;" type="org.assertj.swing.exception.ComponentLookupException"><![CDATA[org.assertj.swing.exception.ComponentLookupException: 
+Unable to find component using matcher org.assertj.swing.core.matcher.JLabelMatcher[name='lNamePlumber', text=<Any>, requireShowing=false].
+
+Component hierarchy:
+javax.swing.JFrame[name='frame0', title='Sivatagi vízhálózat', enabled=true, visible=true, showing=true]
+  javax.swing.JRootPane[]
+    javax.swing.JPanel[name='null.glassPane']
+    javax.swing.JLayeredPane[]
+      com.mycompany.app.NewGameWindow[name=null]
+        javax.swing.JPanel[name=null]
+          javax.swing.JLabel[name=null, text='ÚJ JÁTÉK', enabled=true, visible=true, showing=true]
+          javax.swing.JButton[name='bNewPlumber', text='ÚJ', enabled=true, visible=true, showing=true]
+          javax.swing.JButton[name='bDeletePlumber', text='TÖRLÉS', enabled=true, visible=true, showing=true]
+          javax.swing.JButton[name='bNewSaboteur', text='ÚJ', enabled=true, visible=true, showing=true]
+          javax.swing.JButton[name='bDeleteSaboteur', text='TÖRLÉS', enabled=true, visible=true, showing=true]
+          javax.swing.JButton[name=null, text='VISSZA', enabled=true, visible=true, showing=true]
+          javax.swing.JLabel[name=null, text='Szerelők:', enabled=true, visible=true, showing=true]
+          javax.swing.JLabel[name=null, text='Szabotőrök:', enabled=true, visible=true, showing=true]
+          javax.swing.JScrollPane[name=null, enabled=true, visible=true, showing=true]
+            javax.swing.JViewport[,0,0,267x208,layout=javax.swing.ViewportLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=8388616,maximumSize=,minimumSize=,preferredSize=,isViewSizeSet=true,lastPaintPosition=java.awt.Point[x=0,y=0],scrollUnderway=false]
+              javax.swing.JTable[name='plumberTable', rowCount=3, columnCount=1, enabled=true, visible=true, showing=true]
+                javax.swing.CellRendererPane[,0,0,0x0,hidden]
+            javax.swing.JScrollPane$ScrollBar[name=null, value=0, blockIncrement=10, minimum=0, maximum=75, enabled=true, visible=false, showing=false]
+              javax.swing.plaf.metal.MetalScrollButton[name=null, text='', enabled=true, visible=true, showing=false]
+              javax.swing.plaf.metal.MetalScrollButton[name=null, text='', enabled=true, visible=true, showing=false]
+            javax.swing.JScrollPane$ScrollBar[name=null, value=0, blockIncrement=10, minimum=0, maximum=267, enabled=true, visible=false, showing=false]
+              javax.swing.plaf.metal.MetalScrollButton[name=null, text='', enabled=true, visible=true, showing=false]
+              javax.swing.plaf.metal.MetalScrollButton[name=null, text='', enabled=true, visible=true, showing=false]
+            javax.swing.JViewport[,0,0,267x0,layout=javax.swing.ViewportLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=8388616,maximumSize=,minimumSize=,preferredSize=,isViewSizeSet=false,lastPaintPosition=,scrollUnderway=false]
+          javax.swing.JScrollPane[name=null, enabled=true, visible=true, showing=true]
+            javax.swing.JViewport[,0,0,267x208,layout=javax.swing.ViewportLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=8388616,maximumSize=,minimumSize=,preferredSize=,isViewSizeSet=true,lastPaintPosition=java.awt.Point[x=0,y=0],scrollUnderway=false]
+              javax.swing.JTable[name='saboteurTable', rowCount=3, columnCount=1, enabled=true, visible=true, showing=true]
+                javax.swing.CellRendererPane[,0,0,0x0,hidden]
+            javax.swing.JScrollPane$ScrollBar[name=null, value=0, blockIncrement=10, minimum=0, maximum=75, enabled=true, visible=false, showing=false]
+              javax.swing.plaf.metal.MetalScrollButton[name=null, text='', enabled=true, visible=true, showing=false]
+              javax.swing.plaf.metal.MetalScrollButton[name=null, text='', enabled=true, visible=true, showing=false]
+            javax.swing.JScrollPane$ScrollBar[name=null, value=0, blockIncrement=10, minimum=0, maximum=267, enabled=true, visible=false, showing=false]
+              javax.swing.plaf.metal.MetalScrollButton[name=null, text='', enabled=true, visible=true, showing=false]
+              javax.swing.plaf.metal.MetalScrollButton[name=null, text='', enabled=true, visible=true, showing=false]
+            javax.swing.JViewport[,0,0,267x0,layout=javax.swing.ViewportLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=8388616,maximumSize=,minimumSize=,preferredSize=,isViewSizeSet=false,lastPaintPosition=,scrollUnderway=false]
+          javax.swing.JButton[name=null, text='JÁTÉK INDÍTÁSA', enabled=true, visible=true, showing=true]
+
+	at com.mycompany.app.UnitTest.testNewGameWindow(UnitTest.java:67)
+]]></error>
+    <system-err><![CDATA[Exception in thread "AWT-EventQueue-0" java.lang.Error: Unresolved compilation problem: 
+
+	at com.mycompany.app.Game.NewGame(Game.java:34)
+	at com.mycompany.app.GameWindow.<init>(GameWindow.java:70)
+	at com.mycompany.app.NewGameWindow.bStartGameActionPerformed(NewGameWindow.java:249)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+]]></system-err>
+  </testcase>
+</testsuite>
