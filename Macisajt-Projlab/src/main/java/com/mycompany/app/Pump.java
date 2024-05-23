@@ -1,4 +1,5 @@
 package com.mycompany.app;
+
 import javax.swing.JOptionPane;
 import java.awt.BasicStroke;
 import java.awt.Color;

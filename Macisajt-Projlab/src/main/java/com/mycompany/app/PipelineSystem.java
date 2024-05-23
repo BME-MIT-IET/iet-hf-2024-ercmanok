@@ -1,7 +1,7 @@
 package com.mycompany.app;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A csőrendszert megvalósító osztály.
@@ -13,7 +13,7 @@ public class PipelineSystem implements Serializable {
     /**
      * A pumpák, ciszternák és források által pumpált/szívott maximális vízmennyiség a körök végén.
      */
-    public static final int flowRate = 1;
+    public final int flowRate = 1;
 
     /**
      * A begyűjött víz összmennyísége, kezdetben 0 értékű
@@ -28,7 +28,7 @@ public class PipelineSystem implements Serializable {
     /**
      * A csővezetékrendszer komponens tárolója
      */
-    public final List<Component> components = new ArrayList<>();
+    public final ArrayList<Component> components = new ArrayList<>();
 
     /**
      * Az összegyűjtött vízmennyiség lekérdezése.

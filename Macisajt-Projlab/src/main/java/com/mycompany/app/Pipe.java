@@ -1,20 +1,18 @@
 package com.mycompany.app;
+
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.logging.Logger;
 
 /**
  * A csővezeték hálózat csöveit megvalósító osztály.
  * A víz szállításáért felelős.
  */
 public class Pipe extends Component {
-    private final static Logger logger = Logger.getLogger("pipe logger");
-    private Random r = new Random();
+
     /**
      * A cső grafikus megjelenítésére szolgáló vonal alapértelmezett színe
      */
@@ -38,7 +36,7 @@ public class Pipe extends Component {
     /**
      * A cső grafikus megjelenítésére szolgáló vonal vastagsága
      */
-    public static final int WIDTH = 10;
+    public static final int width = 10;
 
     /**
      * Cső kirajzolása a pályára
@@ -48,7 +46,7 @@ public class Pipe extends Component {
     @Override
     public void drawOnMap(Graphics g) {
         g.setColor(OUTLINE_COLOR);
-        ((Graphics2D) g).setStroke(new BasicStroke(WIDTH + 4f));
+        ((Graphics2D) g).setStroke(new BasicStroke(width + 4));
         if (nodes.size() == 2) {
             this.center = new Point((nodes.get(0).center.x + nodes.get(1).center.x) / 2, (nodes.get(0).center.y + nodes.get(1).center.y) / 2);
             g.drawLine(nodes.get(0).center.x, nodes.get(0).center.y, nodes.get(1).center.x, nodes.get(1).center.y);
@@ -57,7 +55,7 @@ public class Pipe extends Component {
             g.drawLine(nodes.get(0).center.x, nodes.get(0).center.y, nodes.get(0).center.x + (int) (Math.sin(this.hashCode() % 360) * 50), nodes.get(0).center.y - (int) (Math.cos(this.hashCode() % 360) * 50));
         } else return;
 
-        ((Graphics2D) g).setStroke(new BasicStroke(WIDTH));
+        ((Graphics2D) g).setStroke(new BasicStroke(width));
         if (broken)
             g.setColor(BROKEN_COLOR);
         else if (slippery)
@@ -229,7 +227,7 @@ public class Pipe extends Component {
         if ((broken || nodes.size() != 2)) {
             var leaked = Math.min(PIPELINE_SYSTEM.flowRate, waterLevel);
             PIPELINE_SYSTEM.leakWater(leaked);
-            waterLevel--;
+            waterLevel -= leaked;
         }
     }
 
@@ -242,7 +240,7 @@ public class Pipe extends Component {
         try {
             nodes.add((Node) component);
         } catch (ClassCastException ignored) {
-            logger.info("A komponens nem egy csomópont!");
+            System.out.println("A komponens nem egy csomópont!");
         }
     }
 
@@ -255,7 +253,7 @@ public class Pipe extends Component {
         try {
             nodes.remove((Node) component);
         } catch (ClassCastException ignored) {
-            logger.info("A komponens nem egy csomópont!");
+            System.out.println("A komponens nem egy csomópont!");
         }
     }
 
@@ -303,7 +301,7 @@ public class Pipe extends Component {
             }
             return false;
         } catch (ClassCastException ignored) {
-            logger.info("A csőre csak csomópontról lehet lépni!");
+            System.out.println("A csőre csak csomópontról lehet lépni!");
             return false;
         }
 
@@ -328,7 +326,7 @@ public class Pipe extends Component {
      */
     public Node getRandomNode() throws NullPointerException {
         if (nodes.isEmpty()) throw new NullPointerException("A csőhöz nem kapcsolódik csomópont!");
-        return nodes.get( r.nextInt(nodes.size()));
+        return nodes.get((int) (Math.random() * nodes.size()));
     }
 
     /**
@@ -404,20 +402,20 @@ public class Pipe extends Component {
      * Beállítja a cső {@link Pipe#leakableIn} attribútumát egy véletlen értékre 1 és 8 között.
      */
     private void setLeakableIn() {
-        leakableIn = (r.nextInt() * 8) + 1;
+        leakableIn = (int) (Math.random() * 8) + 1;
     }
 
     /**
      * Beállítja a cső {@link Pipe#slipperyFor} attribútumát egy véletlen értékre 1 és 8 között.
      */
     private void setSlipperyFor() {
-        slipperyFor = (r.nextInt() * 8) + 1;
+        slipperyFor = (int) (Math.random() * 8) + 1;
     }
 
     /**
      * Beállítja a cső {@link Pipe#stickyFor} attribútumát egy véletlen értékre 1 és 8 között.
      */
     private void setStickyFor() {
-        stickyFor = (r.nextInt() * 8) + 1;
+        stickyFor = (int) (Math.random() * 8) + 1;
     }
 }

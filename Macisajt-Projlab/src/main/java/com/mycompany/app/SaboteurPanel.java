@@ -1,4 +1,5 @@
 package com.mycompany.app;
+
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;

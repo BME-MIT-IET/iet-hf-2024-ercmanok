@@ -1,4 +1,5 @@
 package com.mycompany.app;
+
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -129,7 +130,7 @@ public class MainMenuWindow extends JPanel {
      * @param evt a gomb megnyomásakor kiváltódott esemény
      */
     private void bContinueGameActionPerformed(ActionEvent evt) {
-        if (Game.loadGame(GameWindow.autosave)) {
+        if (Game.LoadGame(GameWindow.autosave)) {
             View.GAME_WINDOW = new GameWindow();
             View.setContentPane(View.GAME_WINDOW);
             View.FRAME.setJMenuBar(View.GAME_WINDOW.menuBar);
@@ -155,7 +156,7 @@ public class MainMenuWindow extends JPanel {
         fileChooser.setName("bLoadFileChooser");
         fileChooser.setDialogTitle("Válassza ki a korábban mentett játékot");
         if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION
-                && Game.loadGame(fileChooser.getSelectedFile())) {
+                && Game.LoadGame(fileChooser.getSelectedFile())) {
             View.GAME_WINDOW = new GameWindow();
             View.setContentPane(View.GAME_WINDOW);
             View.FRAME.setJMenuBar(View.GAME_WINDOW.menuBar);
